@@ -48,6 +48,7 @@ public class QuizOne extends AppCompatActivity  {
                   startActivity(i);
                 }
 
+                gs.incrementtotal();
 
 
 

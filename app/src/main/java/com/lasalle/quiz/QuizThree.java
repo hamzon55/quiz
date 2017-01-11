@@ -26,24 +26,25 @@ public class QuizThree extends AppCompatActivity {
         final RadioButton r34 = (RadioButton) findViewById(R.id.r34);
 
 
-        Button b33 = (Button) findViewById(R.id.b33);
-        b33.setOnClickListener(new View.OnClickListener() {
+        Button b3 = (Button) findViewById(R.id.b3);
+        b3.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
         if (r31.isChecked()) {
-
-app.incrementCorrecto();
+            app.incrementCorrecto();
 
             Intent i = new Intent(QuizThree.this, LastQuiz.class);
             startActivity(i);
 
 
-        } else if (r32.isChecked() || r33.isChecked() || r34.isChecked()) {
-app.incrementFalso();
+        }
+        else if (r32.isChecked() || r33.isChecked() || r34.isChecked()) {
+                app.incrementFalso();
             Intent i = new Intent(QuizThree.this, LastQuiz.class);
             startActivity(i);
         }
 
+                app.incrementtotal();
     }
 
 });

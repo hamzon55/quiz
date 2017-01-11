@@ -7,6 +7,17 @@ import android.app.Application;
 
 public class Global extends  Application{
 
+
+    public static int total ;
+
+    public static int getTotal() {
+        return total;
+    }
+
+    public static void setTotal(int total) {
+        Global.total = total;
+    }
+
     public static int correcto ;
     public  int getCorrecto()
     {
@@ -36,9 +47,16 @@ public void incrementCorrecto(){
         falso++;
     }
 
+    public void incrementtotal(){
+
+        total++;
+    }
+
     public void reset(){
         correcto=0;
+
         falso=0;
+        total=0;
     }
 
 

@@ -18,22 +18,21 @@ public class LastQuiz extends AppCompatActivity {
         setContentView(R.layout.lastquiz);
         final Global app = (Global) getApplicationContext();
 
-     TextView text1 =(TextView)findViewById(R.id.text1);
+        TextView rest =(TextView)findViewById(R.id.textresult);
 
+        TextView text1 =(TextView)findViewById(R.id.text1);
         TextView texto =(TextView)findViewById(R.id.texto);
-
-
         int correcto = app.getCorrecto();
         int falso = app.getFalso();
-
-
+        int total = app.getTotal();
 
         texto.setText(Integer.toString(correcto));
         text1.setText(Integer.toString(falso));
+        rest.setText(Integer.toString(total));
 
 
-        Button b2 = (Button) findViewById(R.id.b2);
-        b2.setOnClickListener(new View.OnClickListener() {
+        Button b1 = (Button) findViewById(R.id.b1);
+        b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(LastQuiz.this, MainActivity.class);
 

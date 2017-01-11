@@ -43,6 +43,7 @@ app.incrementFalso();
             Intent i = new Intent(QuizTwo.this, QuizThree.class);
             startActivity(i);
         }
+                app.incrementtotal();
 
     }
 
