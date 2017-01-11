@@ -9,10 +9,11 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 
-public class QuizOne extends AppCompatActivity {
+public class QuizOne extends AppCompatActivity  {
 
-    int correcto =0;
-    int falso =0;
+
+
+
 
 
     @Override
@@ -20,33 +21,39 @@ public class QuizOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quizone);
 
+        final Global gs = (Global) getApplication();
+
+
 
         final RadioButton r1 = (RadioButton)findViewById(R.id.r1);
         final RadioButton r2 = (RadioButton)findViewById(R.id.r2);
         final RadioButton r3 = (RadioButton)findViewById(R.id.r3);
         final RadioButton r4 = (RadioButton)findViewById(R.id.r4);
 
+
+
+
         Button b2 = (Button) findViewById(R.id.b2);
         b2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
               if (r1.isChecked()) {
-                    correcto++;
-                    falso=0;
-                    Intent i=new Intent(QuizOne.this,LastQuiz.class);
-                    i.putExtra("param1",correcto);
-                  i.putExtra("param2",falso);
-
+                  gs.incrementCorrecto();
+                    Intent i=new Intent(QuizOne.this,QuizTwo.class);
                   startActivity(i);
              }
               else if (r2.isChecked()|| r3.isChecked()|| r4.isChecked()){
-                    correcto=0;
-                    falso++;
-                  Intent i=new Intent(QuizOne.this,LastQuiz.class);
-                  i.putExtra("param1",correcto);
-                  i.putExtra("param2",falso);
+                  gs.incrementFalso();
+                  Intent i=new Intent(QuizOne.this,QuizTwo.class);
                   startActivity(i);
                 }
+
+
+
+
+
+
+
 
             }
 

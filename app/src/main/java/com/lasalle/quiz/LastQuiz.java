@@ -10,22 +10,25 @@ import android.widget.TextView;
 
 
 public class LastQuiz extends AppCompatActivity {
-    int correcto;
-   int falso;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lastquiz);
+        final Global app = (Global) getApplicationContext();
 
      TextView text1 =(TextView)findViewById(R.id.text1);
 
         TextView texto =(TextView)findViewById(R.id.texto);
-        Bundle extras = getIntent().getExtras();
-        correcto = (Integer) extras.get("param1");
-        texto.setText(Integer.toString(correcto));
 
-      falso = (Integer) extras.get("param2");
+
+        int correcto = app.getCorrecto();
+        int falso = app.getFalso();
+
+
+
+        texto.setText(Integer.toString(correcto));
         text1.setText(Integer.toString(falso));
 
 
@@ -33,7 +36,9 @@ public class LastQuiz extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(LastQuiz.this, MainActivity.class);
+
                 startActivity(intent);
+
             }
         });
 
