@@ -4,4 +4,72 @@
     android:layout_height="match_parent">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Submit"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#ffffff"
+            android:id="@+id/b2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/r"
+            android:layout_marginBottom="64dp"
+            android:layout_above="@+id/b2"
+            android:layout_alignParentStart="true">
+            <RadioButton android:id="@+id/r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respuesta1"
+                />
+            <RadioButton android:id="@+id/r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respuesta2"
+                />
+            <RadioButton android:id="@+id/r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respuesta3"
+                />
+            <RadioButton android:id="@+id/r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respuesta4"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:text="@string/Text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="#000"
+
+            android:id="@+id/textView"
+            android:layout_marginBottom="59dp"
+            android:layout_above="@+id/r"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="@string/Text0"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:id="@+id/textView2" />
+    </RelativeLayout>
+
 </LinearLayout>
