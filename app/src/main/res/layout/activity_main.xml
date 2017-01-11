@@ -10,8 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lasalle.quiz.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <Button
+        android:text="Start Quiz"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:id="@+id/b1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
