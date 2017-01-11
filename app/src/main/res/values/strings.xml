@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Quiz</string>
     <string name="respuesta1">Respuesta1</string>
+    <string name="respuesta12">Respuesta1</string>
     <string name="respuesta2">Respuesta2</string>
     <string name="respuesta3">Respuesta3</string>
     <string name="respuesta4">Respuesta4</string>
     <string name="Text1">Who won the Cup</string>
     <string name="Text0">Question 1/5</string>
+    <string name="Text2">Who is Sabas</string>
+    <string name="Textcorrect">Respuesta correcta</string>
+    <string name="Textincorrect">Respuesta incorrecta</string>
+    <string name="Textagain">Try Again</string>
+
+
 
 </resources>
