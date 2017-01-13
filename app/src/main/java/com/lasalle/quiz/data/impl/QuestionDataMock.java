@@ -33,16 +33,27 @@ public class QuestionDataMock implements QuestionData {
                         new Answer("Respuesta 4", false)
 
                 )));
+
+
+
+        questionList.add(new Question("Pregunta 3",
+                Arrays.asList(
+                        new Answer("Respuesta 1", false),
+                        new Answer("Respuesta 2", true),
+                        new Answer("Respuesta 3", false),
+                        new Answer("Respuesta 4", false)
+
+                )));
     }
 
 
     @Override
     public Question getQuestion(int questionId) {
-        return null;
+        return questionList.get(questionId);
     }
 
     @Override
     public Integer countQuestions() {
-        return null;
+        return questionList.size();
     }
 }
