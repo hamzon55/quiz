@@ -11,11 +11,6 @@ import android.widget.Toast;
 
 public class QuizOne extends AppCompatActivity  {
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,39 +18,30 @@ public class QuizOne extends AppCompatActivity  {
 
         final Global gs = (Global) getApplication();
 
-
-
         final RadioButton r1 = (RadioButton)findViewById(R.id.r1);
         final RadioButton r2 = (RadioButton)findViewById(R.id.r2);
         final RadioButton r3 = (RadioButton)findViewById(R.id.r3);
         final RadioButton r4 = (RadioButton)findViewById(R.id.r4);
 
-
-
-
         Button b2 = (Button) findViewById(R.id.b2);
         b2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-              if (r1.isChecked()) {
-                  gs.incrementCorrecto();
-                    Intent i=new Intent(QuizOne.this,QuizTwo.class);
-                  startActivity(i);
-             }
-              else if (r2.isChecked()|| r3.isChecked()|| r4.isChecked()){
-                  gs.incrementFalso();
-                  Intent i=new Intent(QuizOne.this,QuizTwo.class);
-                  startActivity(i);
-                }
-
+                TestQuiz();
                 gs.incrementtotal();
+            }
 
-
-
-
-
-
-
+            private void TestQuiz() {
+                if (r1.isChecked()) {
+                    gs.incrementCorrecto();
+                      Intent i=new Intent(QuizOne.this,QuizTwo.class);
+                    startActivity(i);
+               }
+                else if (r2.isChecked()|| r3.isChecked()|| r4.isChecked()){
+                    gs.incrementFalso();
+                    Intent i=new Intent(QuizOne.this,QuizTwo.class);
+                    startActivity(i);
+                  }
             }
 
         });

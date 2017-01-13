@@ -25,22 +25,19 @@ public class QuizTwo extends AppCompatActivity {
         final RadioButton r32 = (RadioButton) findViewById(R.id.r32);
         final RadioButton r42 = (RadioButton) findViewById(R.id.r42);
 
-
         Button b22 = (Button) findViewById(R.id.b33);
         b22.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-        if (r12.isChecked()) {
-
-app.incrementCorrecto();
-
-            Intent i = new Intent(QuizTwo.this, QuizThree.class);
+                if (r12.isChecked()) {
+            app.incrementCorrecto();
+            Intent i = new Intent(QuizTwo.this, Result.class);
             startActivity(i);
 
 
         } else if (r22.isChecked() || r32.isChecked() || r42.isChecked()) {
-app.incrementFalso();
-            Intent i = new Intent(QuizTwo.this, QuizThree.class);
+                app.incrementFalso();
+            Intent i = new Intent(QuizTwo.this, Result.class);
             startActivity(i);
         }
                 app.incrementtotal();
