@@ -35,7 +35,6 @@ public class QuestionDataMock implements QuestionData {
                 )));
 
 
-
         questionList.add(new Question("Pregunta 3",
                 Arrays.asList(
                         new Answer("Respuesta 1", false),

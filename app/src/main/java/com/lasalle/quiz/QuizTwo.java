@@ -11,8 +11,6 @@ import android.widget.RadioButton;
 public class QuizTwo extends AppCompatActivity {
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,22 +28,22 @@ public class QuizTwo extends AppCompatActivity {
 
             public void onClick(View v) {
                 if (r12.isChecked()) {
-            app.incrementCorrecto();
-            Intent i = new Intent(QuizTwo.this, Result.class);
-            startActivity(i);
+                    app.incrementCorrecto();
+                    Intent i = new Intent(QuizTwo.this, Result.class);
+                    startActivity(i);
 
 
-        } else if (r22.isChecked() || r32.isChecked() || r42.isChecked()) {
-                app.incrementFalso();
-            Intent i = new Intent(QuizTwo.this, Result.class);
-            startActivity(i);
-        }
+                } else if (r22.isChecked() || r32.isChecked() || r42.isChecked()) {
+                    app.incrementFalso();
+                    Intent i = new Intent(QuizTwo.this, Result.class);
+                    startActivity(i);
+                }
                 app.incrementtotal();
 
-    }
+            }
 
-});
-}
+        });
+    }
 }
 
 

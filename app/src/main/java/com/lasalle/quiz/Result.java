@@ -17,10 +17,10 @@ public class Result extends AppCompatActivity {
         setContentView(R.layout.lastquiz);
         final Global app = (Global) getApplicationContext();
 
-        TextView rest =(TextView)findViewById(R.id.textresult);
+        TextView rest = (TextView) findViewById(R.id.textresult);
 
-        TextView text1 =(TextView)findViewById(R.id.text1);
-        TextView texto =(TextView)findViewById(R.id.texto);
+        TextView text1 = (TextView) findViewById(R.id.text1);
+        TextView texto = (TextView) findViewById(R.id.texto);
 
 
         texto.setText(Integer.toString(app.getCorrecto()));
@@ -40,6 +40,6 @@ public class Result extends AppCompatActivity {
 
     }
 
-    }
+}
 
 

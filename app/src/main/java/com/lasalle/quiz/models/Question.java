@@ -8,9 +8,8 @@ import java.util.List;
 
 public class Question {
 
-    private String text ;
+    private String text;
     private List<Answer> answerList;
-
 
 
     public Question(String text, List<Answer> answerList) {
@@ -33,10 +32,6 @@ public class Question {
     public void setAnswerList(List<Answer> answerList) {
         this.answerList = answerList;
     }
-
-
-
-
 
 
 }

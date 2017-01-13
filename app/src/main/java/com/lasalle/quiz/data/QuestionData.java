@@ -8,6 +8,7 @@ import com.lasalle.quiz.models.Question;
 
 public interface QuestionData {
 
-    public Question getQuestion (int questionId);
+    public Question getQuestion(int questionId);
+
     public Integer countQuestions();
 }
