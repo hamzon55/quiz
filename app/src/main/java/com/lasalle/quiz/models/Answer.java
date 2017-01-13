@@ -13,7 +13,7 @@ public class Answer {
         this.text = text;
         this.correct = correct;
     }
-    
+
     public String getText() {
         return text;
     }

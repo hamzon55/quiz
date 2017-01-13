@@ -8,9 +8,14 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class QuizOne extends AppCompatActivity  {
 
+
+    private List<RadioButton> radioButtonList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +23,14 @@ public class QuizOne extends AppCompatActivity  {
 
         final Global gs = (Global) getApplication();
 
-        final RadioButton r1 = (RadioButton)findViewById(R.id.r1);
-        final RadioButton r2 = (RadioButton)findViewById(R.id.r2);
-        final RadioButton r3 = (RadioButton)findViewById(R.id.r3);
-        final RadioButton r4 = (RadioButton)findViewById(R.id.r4);
+
+        radioButtonList=new ArrayList<>();
+        radioButtonList.add((RadioButton) findViewById(R.id.r1));
+        radioButtonList.add((RadioButton) findViewById(R.id.r2));
+        radioButtonList.add((RadioButton) findViewById(R.id.r3));
+        radioButtonList.add((RadioButton) findViewById(R.id.r4));
+
+
 
         Button b2 = (Button) findViewById(R.id.b2);
         b2.setOnClickListener(new View.OnClickListener() {
