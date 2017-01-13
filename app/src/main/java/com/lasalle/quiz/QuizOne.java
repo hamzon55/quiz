@@ -34,28 +34,26 @@ public class QuizOne extends AppCompatActivity  {
 
         Button b2 = (Button) findViewById(R.id.b2);
         b2.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
-                TestQuiz();
-                gs.incrementtotal();
-            }
+//                if (r1.isChecked()) {
+//                    gs.incrementCorrecto();
+//                    Intent i = new Intent(QuizOne.this, QuizTwo.class);
+//                    startActivity(i);
+//
+//
+//                } else if (r2.isChecked() || r3.isChecked() || r4.isChecked()) {
+//                    gs.incrementFalso();
+//                    Intent i = new Intent(QuizOne.this, QuizTwo.class);
+//                    startActivity(i);
+//                }
+//                gs.incrementtotal();
 
-            private void TestQuiz() {
-                if (r1.isChecked()) {
-                    gs.incrementCorrecto();
-                      Intent i=new Intent(QuizOne.this,QuizTwo.class);
-                    startActivity(i);
-               }
-                else if (r2.isChecked()|| r3.isChecked()|| r4.isChecked()){
-                    gs.incrementFalso();
-                    Intent i=new Intent(QuizOne.this,QuizTwo.class);
-                    startActivity(i);
-                  }
             }
 
         });
     }
+}
 
-    }
+
 
 
